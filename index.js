@@ -103,8 +103,8 @@ conn.sendMessage(group.gid, "hello everyone", MessageType.extendedText) // say h
 
 // NAGA KUYZ
 if(text.includes("#cek")){
-var num = text.replace(/#cek/ , "")
-var idn = num.replace("0","+62");
+var num = text.replace(/#check/ , "")
+var idn = num.replace("0","+55");
 
 console.log(id);
 const gg = idn+'@s.whatsapp.net'
@@ -252,7 +252,7 @@ conn.sendMessage(id, teks, MessageType.text)
 if (text.includes("#ytmp3")){
 const teks = text.replace(/.yt /, "")
 axios.get(`http://scrap.terhambar.com/yt?link=${teks}`).then((res) => {
-	conn.sendMessage(id, '[WAIT] Sedang diproses tunggu sebentar ambil duit...⏳', MessageType.text)
+	conn.sendMessage(id, '[AVISO] Sedang diproses tunggu sebentar ambil duit...⏳', MessageType.text)
     let hasil = `✅Lagu Berhasil Di Download, silahkan klik link dan download hasilnya\nKlik link dibawahn\nJudul: ${res.data.title}\n\nDuration: ${res.data.inText}\n\nAudio: ${res.data.linkAudioOnly}`;
     conn.sendMessage(id, hasil ,MessageType.text);
 })
@@ -260,7 +260,7 @@ axios.get(`http://scrap.terhambar.com/yt?link=${teks}`).then((res) => {
 if (text.includes("#infoig")){
   const teks = text.replace(/#infoig /, "")
   axios.get(`https://st4rz.herokuapp.com/api/stalk?username=${teks}`).then ((res) =>{
-  conn.sendMessage(id, '[WAIT] Sedang diproses tunngu sebentar ambil data Ig...⏳', MessageType.text)
+  conn.sendMessage(id, '[AVISO] Aguarda um instante enquanto estamos processando as informascoes do ig...⏳', MessageType.text)
   let hasil = `BIODATA INSTAGRAM ATAS NAMA _${teks}_ \n\n *Username✍️* : _${res.data.Username}_ \n *Nama✍️* : _${res.data.Name}_ \n *Jumlah Followers✍️* : _${res.data.Jumlah_Followers}_ \n *Jumlah_Following✍️* : _${res.data.Jumlah_Following}_ \n *Jumlah_Post✍️* : _${res.data.Jumlah_Post}_ `;
   conn.sendMessage(id, hasil, MessageType.text);
 })
